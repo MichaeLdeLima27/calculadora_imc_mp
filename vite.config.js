@@ -1,15 +1,11 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// https://vite.dev/config/
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  root: './', // Certifique-se de que a raiz está configurada corretamente
   build: {
-    outDir: 'dist', // Diretório de saída para o build
-  },
-  resolve: {
-    alias: {
-      '@': '/src', // Configuração de alias, se necessário
-    },
+    outDir: 'dist',
   },
 });
