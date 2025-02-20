@@ -1,11 +1,12 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  root: './', // Certifique-se de que a raiz está configurada corretamente
+  root: './', // A raiz do projeto deve estar configurada corretamente
   build: {
-    outDir: 'dist',
+    outDir: 'dist', // Pasta de saída para o build
   },
-});
+  publicDir: 'public', // Garantindo que o diretório 'public' seja tratado corretamente
+})
